@@ -2,7 +2,7 @@ kind: Secret
 apiVersion: v1
 metadata:
   name: deepflow-tmp
-data:
+stringData:
   admin-password: <path:secret/data/myapp#admin-password>
   admin-user: <path:secret/data/myapp#admin-user>
   ldap-toml: ''
