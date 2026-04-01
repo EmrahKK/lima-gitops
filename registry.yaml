@@ -11,6 +11,8 @@ spec:
     repoURL: https://github.com/EmrahKK/lima-gitops.git
     path: registry/lima-local
     targetRevision: main
+    plugin:
+      name: avp    
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
