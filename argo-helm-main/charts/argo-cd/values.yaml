@@ -557,11 +557,8 @@ configs:
     plugins:
       avp:
         allowConcurrency: true
-        discover:
-          find:
-            command: [find, ".", -name, "*.yaml"]
         generate:
-          command: [argocd-vault-plugin, generate, "."]
+          command: [/home/argocd/custom-tools/argocd-vault-plugin, generate, "."]
         lockRepo: false      
       # --- First plugin
       # my-plugin:
@@ -2869,9 +2866,8 @@ repoServer:
           name: plugins
         - mountPath: /tmp
           name: cmp-tmp
-        - mountPath: /usr/local/bin/argocd-vault-plugin
+        - mountPath: /home/argocd/custom-tools
           name: custom-tools
-          subPath: argocd-vault-plugin
         - mountPath: /home/argocd/cmp-server/config/plugin.yaml
           subPath: avp.yaml
           name: argocd-cmp-cm
@@ -2926,7 +2922,7 @@ repoServer:
       args:
         - |
           wget -qO /custom-tools/argocd-vault-plugin \
-            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v1.18.1/argocd-vault-plugin_1.18.1_linux_amd64
+            https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v1.18.1/argocd-vault-plugin_1.18.1_linux_arm64
           chmod +x /custom-tools/argocd-vault-plugin
       volumeMounts:
         - mountPath: /custom-tools

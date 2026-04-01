@@ -11,6 +11,8 @@ spec:
     repoURL: https://github.com/EmrahKK/lima-gitops.git
     path: registry/lima-local/components/vault
     targetRevision: HEAD
+    plugin:
+      name: avp
   destination:
     server: https://kubernetes.default.svc
     namespace: vault
