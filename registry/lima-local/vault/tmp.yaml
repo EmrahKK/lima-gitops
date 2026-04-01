@@ -1,0 +1,9 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: deepflow-tmp
+data:
+  admin-password: ZGVlcGZsb3c=
+  admin-user: YWRtaW4=
+  ldap-toml: ''
+type: Opaque
