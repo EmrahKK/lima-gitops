@@ -492,7 +492,7 @@ spec:
             activeService: true
             hosts:
               - host: vault.lima.local
-                paths: []
+                paths: [/]
             ## Extra paths to prepend to the host configuration. This is useful when working with annotation based services.
             extraPaths: []
             # - path: /*
