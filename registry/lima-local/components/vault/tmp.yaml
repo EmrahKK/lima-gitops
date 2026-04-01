@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: deepflow-tmp
 data:
-  admin-password: ZGVlcGZsb3c=
-  admin-user: YWRtaW4=
+  admin-password: <path:secret/data/myapp#admin-password>
+  admin-user: <path:secret/data/myapp#admin-user>
   ldap-toml: ''
 type: Opaque
