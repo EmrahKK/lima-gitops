@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://tfs.burgan.com.tr/tfs/DefaultCollection/DevOps/_git/ocptest-ebt-bank
+    repoURL: https://github.com/EmrahKK/lima-gitops.git
     path: registry/lima-local/components/vault
     targetRevision: HEAD
   destination:
