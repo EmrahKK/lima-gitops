@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/EmrahKK/lima-gitops.git
-    path: registry/lima-local
+    path: registry/test
     targetRevision: main
     plugin:
       name: avp    
