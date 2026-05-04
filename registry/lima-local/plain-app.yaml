@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: plain-app-components
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: '60'
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/EmrahKK/lima-gitops.git
+    path: registry/lima-local/components/plain-app
+    targetRevision: HEAD
+    plugin:
+      name: avp
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: plain-app
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
