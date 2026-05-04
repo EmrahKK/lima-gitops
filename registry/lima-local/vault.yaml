@@ -12,7 +12,7 @@ spec:
     path: registry/lima-local/components/vault
     targetRevision: HEAD
     plugin:
-      name: avp-kustomize
+      name: avp
   destination:
     server: https://kubernetes.default.svc
     namespace: vault
